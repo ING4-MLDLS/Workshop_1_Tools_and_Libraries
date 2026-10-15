@@ -1,105 +1,120 @@
-# Workshop 1: Tools and Libraries
+# Workshop_1_Tools_and_Libraries
 
-Welcome to the introductory workshop for **Machine Learning, Deep Learning & Security** (`MLDLS`).
+Welcome to the introductory workshop for Machine Learning, Deep Learning & Security (MLDLS).
 
 This workshop serves as a pilot session designed to achieve two main goals:
 
-1. **Technical Validation:** Verify that your local Python environment, dependencies, and core libraries (`NumPy`, `Pandas`, `Matplotlib`, `Seaborn`) are correctly configured.
-2. **Workflow & Grading Assessment:** Familiarize you with the automated grading system (`nbgrader`) and the Git submission workflow (`upstream` / `origin`) that will be used for all remaining sessions throughout the semester.
+1. Technical Validation: Verify that your Python environment, dependencies, and core libraries (NumPy, Pandas, Matplotlib, Seaborn) are correctly configured.
 
-To test your environment, this session applies the **Spam Classification** example covered during the introductory lecture.
+2. Workflow & Grading Assessment: Familiarize you with the automated grading system (nbgrader) and the Git submission workflow (upstream / origin) that will be used for all remaining practical sessions throughout the semester.
 
----
+To test your environment, this session applies the Spam Classification example covered during the introductory lecture, framed within an IT security context.
 
-## 🎯 Objectives
+## Objectives
 
 By completing this workshop, you will:
 
-- Verify your local Python runtime environment and library versions.
-- Master the **Git submission pipeline** (pulling updates from `upstream` and pushing solutions to your private `origin`).
-- Respond using `nbgrader` autograded cells.
-- Implement matrix operations ($z = S\theta + b$), sigmoid vector operations, and binary thresholding for spam detection using `NumPy`.
+* Verify your local Python runtime environment and library versions.
 
----
+* Master the Git submission pipeline (pulling updates from upstream and pushing solutions to your private origin).
 
-## 🛠️ Environment & Workflow Instructions
+* Respond using nbgrader autograded cells.
 
-You can complete this notebook locally on your computer or in Google Colab. Choose the setup that applies to you below.
+* Implement matrix operations ($z = S\theta + b$), sigmoid vector operations, and binary thresholding for spam detection using NumPy.
 
-### Option A: Local Setup (VS Code / JupyterLab)
+## Repository Contents
 
-#### 1. One-Time Setup (If not already done)
-Link your private repository to the course central distribution repository (`upstream`):
+Your template repository contains the following files:
 
-```bash
-git remote add upstream https://github.com/ING4-MLDLS/Workshop_1_Tools_and_Libraries.git
+```
+Workshop_1_Tools_and_Libraries/
+├── README.md                              <-- This instruction file
+├── Workshop_1_Tools_and_Libraries.pdf     <-- The official workshop subject & statements
+├── Workshop_1_Tools_and_Libraries.ipynb   <-- The notebook to complete and submit
+└── logins.csv                             <-- Authentication log dataset for future exercises
+
 ```
 
-#### 2. Fetching Workshop Files
-To fetch and merge the latest workshop updates into your local working branch:
+## Environment & Setup Instructions
 
-```bash
-git fetch upstream
-git merge upstream/main --allow-unrelated-histories -m "Fetch Workshop 1"
-```
+You can complete this assignment locally using VS Code / JupyterLab, or online using Google Colab.
 
----
+### 1. Local Setup (VS Code / JupyterLab)
 
-### Option B: Google Colab Setup
+1. Link Central Template Repository (Upstream):
+   Open your terminal in your local repository folder and run:
 
-If you prefer using **Google Colab**, follow these steps to work on and save your assignment:
-
-1. **Open the Notebook in Colab:**
-   - Go to [Google Colab](https://colab.research.google.com/).
-   - Select the **GitHub** tab.
-   - Enter your private repository URL or `ING4-MLDLS/coursework-2026`.
-   - Select `Workshop1_tools_and_libraries/Workshop1.ipynb`.
-
-2. **Save Your Changes directly to GitHub:**
-   - As you complete exercises, go to **File $\rightarrow$ Save a copy in GitHub**.
-   - Select your private repository (`origin`).
-   - Ensure the file path remains strictly: `Workshop1_tools_and_libraries/Workshop1.ipynb`.
-   - Add a commit message (e.g., `"Update Workshop 1 solutions"`) and click **OK**.
-
----
-
-## 📂 Workshop Contents
-
-```text
-Workshop1_tools_and_libraries/
-├── README.md                            <-- This file
-├── Workshop_1_Tools_and_Libraries.pdf   <-- The main document
-└── Workshop_1_Tools_and_Libraries.ipynb <-- The notebook to complete and submit
-```
-
----
-
-## ⚠️ Essential Rules for Autograding
-
-Because your work will be collected and graded automatically using `nbgrader`, you must adhere to the following rules:
-
-1. **Keep the Notebook Name Intact:** Do **NOT** rename `Workshop_1_Tools_and_Libraries.ipynb`.
-2. **Write Code Only in Designated Areas:** Insert your solutions strictly between the solution comments:
-   ```python
-   ### BEGIN SOLUTION
-   # Your code here
-   ### END SOLUTION
    ```
-3. **Do NOT Alter or Delete Test Cells.**
-4. **Test Before Submitting:** Run all test cells locally in Jupyter. Ensure you execute `Kernel -> Restart & Run All` to verify there are no hidden state issues or out-of-order execution bugs.
+   git remote add upstream https://github.com/ING4-MLDLS/Workshop_1_Tools_and_Libraries.git
+   
+   ```
 
----
+2. Fetch Assignment Files:
+   Retrieve the workshop files into your working branch:
 
-## 🚀 How to Submit Your Work
+   ```
+   git fetch upstream
+   git merge upstream/main --allow-unrelated-histories -m "Fetch Workshop 1 template"
+   
+   ```
 
-1. Save your notebook in JupyterLab / Jupyter Notebook.
-2. Open your terminal in your repository folder.
-3. Commit and push your changes to your private repository (`origin`):
+3. Open Notebook:
+   Launch JupyterLab or VS Code and open `Workshop_1_Tools_and_Libraries.ipynb`.
 
-```bash
-git add Workshop1_tools_and_libraries/Workshop1.ipynb
-git commit -m "Submit Workshop 1: Setup and Spam Classification"
+### 2. Google Colab Setup
+
+1. Open in Google Colab:
+
+   * Go to Google Colab.
+
+   * Click on the GitHub tab.
+
+   * Enter the repository URL: `https://github.com/ING4-MLDLS/Workshop_1_Tools_and_Libraries.git`.
+
+   * Select `Workshop_1_Tools_and_Libraries.ipynb`.
+
+2. Save Work directly to GitHub:
+
+   * As you complete your code, go to File -> Save a copy in GitHub.
+
+   * Select your private repository (origin).
+
+   * Ensure the file path remains exactly: `Workshop_1_Tools_and_Libraries.ipynb`.
+
+   * Add a commit message (e.g., "Update Workshop 1 answers") and click OK.
+
+## Rules for Answer Insertion & Autograding
+
+Your answers will be collected and evaluated automatically using nbgrader. Please follow these mandatory rules:
+
+1. Keep Filenames Intact: Do NOT rename `Workshop_1_Tools_and_Libraries.ipynb`.
+
+2. Insert Answers in Dedicated Cells: Write your code strictly inside the designated solution blocks:
+
+   ```
+   # Your code here
+   
+   ```
+
+3. Do NOT Delete Test Cells: Read-only test cells (containing assert or hidden tests) are used by the automated evaluator. Do not modify or delete them.
+
+4. Kernel Restart Check: Before submitting, select Kernel -> Restart & Run All to verify that your notebook executes sequentially without errors.
+
+## Submission Process
+
+Once all exercises are completed and verified:
+
+1. Save your notebook file (`Workshop_1_Tools_and_Libraries.ipynb`).
+
+2. Open your terminal in your local repository directory.
+
+3. Commit and push your work to your private student repository (origin):
+
+```
+git add Workshop_1_Tools_and_Libraries.ipynb
+git commit -m "Submit Workshop 1: Tools and Libraries"
 git push origin main
+
 ```
 
-> ⏰ **Submission Deadline:** Ensure your final commit is pushed to your `main` branch before the announced deadline. Automatic collection will run directly on your private GitHub repositories.
+Important: Ensure your final code is pushed to your main branch before the submission deadline. Automatic collection scripts will pull directly from your private GitHub repository.
