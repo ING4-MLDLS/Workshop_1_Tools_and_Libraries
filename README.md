@@ -37,9 +37,9 @@ Workshop_1_Tools_and_Libraries/
 
 ## Environment & Setup Instructions
 
-You can complete this assignment locally using VS Code / JupyterLab, or online using Google Colab.
+You can complete this assignment locally using JupyterNotebook, or online using Google Colab.
 
-### 1. Local Setup (VS Code / JupyterLab)
+### 1. Local Setup (JupyterNotebook / JupyterLab)
 
 1. Link Central Template Repository (Upstream):
    Open your terminal in your local repository folder and run:
